@@ -13,7 +13,7 @@
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/touch/apple-touch-icon-72x72-precomposed.png">
         <link rel="apple-touch-icon-precomposed" href="img/touch/apple-touch-icon-57x57-precomposed.png">
         <link rel="shortcut icon" href="img/touch/apple-touch-icon.png">-->
-        
+
         <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
         <!--
         <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
@@ -29,7 +29,7 @@
         <div role="main" class="clearfix">
         	<div id="header"><img src="img/mockup/logo.png"/></div>
             <div id="quotesAndNews" class="clearfix">
-            	
+
                 <div id="stocks">
                 <h4 id="quoteName" class="sectionHeader">NYSE: LBC</h4>
                 <div id="wrapper">
@@ -77,7 +77,7 @@
                     <img src="img/mockup/stockChart.png" />
                 </div>
                 </div>
-                
+
                 <div id="news">
                 <h4 class="sectionHeader">Latest News</h4>
                 	<div id="arrowShadowOne"></div><!-----------------------------------	This is the shadow and the arrow of the latest news, not sure if it's the best solution but it works for now	-->
@@ -97,7 +97,7 @@
                     </div>
 					<div id="arrowShadowTwo"></div><!-----------------------------------	This is the shadow and the arrow of the latest news, not sure if it's the best solution but it works for now	-->
                 </div>
-                
+
                 <div class="clearfix"></div>
             </div>
             <div id="bucketWrapper" class="clearfix">
@@ -111,8 +111,8 @@
                 <div class="bucket"><div class="bucketInside"><h5>Event Calendar</h5><img src="img/mockup/icon.png"></div></div>
                 <div class="bucket"><div class="bucketInside"><h5>Event Calendar</h5><img src="img/mockup/icon.png"></div></div>
                 </div>
-                
-                
+
+
                 <div id="subSectionBuckets" class="clearfix">
                 <div class="feedLinks clearfix">
                 	<ul class="clearfix">
@@ -329,11 +329,11 @@
 			var newsScrollStarted = false;
 			var windowWidth;
 			var windowHeight;
-			
+
 			function iScrollPhone(destroy) {
-			
+
 				if(destroy == true)
-				{	
+				{
 					console.log('Destroy: ' + destroy);
 					console.log('myScroll is of value: ' + myScroll);
 					if(!myScroll)
@@ -342,130 +342,130 @@
 						return false;
 					}
 					else if(myScroll != 'undefined')
-					{	
+					{
 						myScroll.destroy();
 						myScroll = null;
-						
+
 						$('.scrollable').unwrap().unwrap().removeClass('scrollable');
 						myScrollStarted = false;
-						
+
 						//console.log('myScroll destroyed!');
-						
+
 						newsScroll.destroy();
 						newsScroll = null;
-						
+
 						$('.newsLinkBlock').attr('id', '').unwrap();
 						newsScrollStarted = false;
-						
+
 						//console.log('newsScroll destroyed!');
-						
+
 						return false;
 					}
 				}
 				else
-				{	
+				{
 					$('#quotesAndNews, #bucketWrapper').addClass('scrollable');
-					
+
 					$('.scrollable').wrapAll('<div id="wrapper"><div id="scroller"></div></div>');
-					
+
 					$('#wrapper').css({
 						'width': '100%',
 						'height': '440px',
-						'position': 'absolute', 
+						'position': 'absolute',
 						'z-index': 1,
 						'overflow': 'auto'
 					});
-					
-					$('#scroller').css({	
+
+					$('#scroller').css({
 						'width': '100%',
 						'position': 'absolute',
 						'z-index':1
 					});
-					
+
 					myScroll = new iScroll('wrapper', {  });
 					myScrollStarted = true;
-					
+
 					$('.newsLinkBlock').attr('id', 'scroller2').wrap('<div id="newsWrapper"></div>');
-					
+
 					$('#newsWrapper').css({
 						//'width': '320px',
 						'width': '98%',
 						'height': '5.625em',
-						'position': 'absolute', 
+						'position': 'absolute',
 						'z-index': 1,
 						'overflow': 'auto'
 					});
-					
+
 					newsScroll = new iScroll('newsWrapper', {  });
 					newsScrollStarted = true;
-				}	
+				}
 			};
-					
-			function bindSubBucketClick(){	
+
+			function bindSubBucketClick(){
 				$('.bucketInside').bind('click', function(){
 					 $('#bucketWrapper').toggleClass('slide');
 				 });
-		 
-				 $('li#back').bind('click', function(){	
+
+				 $('li#back').bind('click', function(){
 					  $('#bucketWrapper').toggleClass('slide');
-				 });		
+				 });
 			};
-			
+
 			function resizeFunctions(){
-				windowWidth = parseInt(window.innerWidth);	
-				windowHeight = parseInt(window.innerHeight);	
+				windowWidth = parseInt(window.innerWidth);
+				windowHeight = parseInt(window.innerHeight);
 				if(windowWidth<=499)
-				{	
+				{
 					if(myScrollStarted == true && newsScrollStarted == true)
 					{
 						//console.log('Phone screen size / Scrolls ARE started, return false.')
-						return false; 
+						return false;
 					}
 					else
-					{	
+					{
 						//console.log('Phone screen Size / Scrolls are not started and we are starting them.')
 						iScrollPhone();
 					}
 				}
-				else if(windowWidth>=500 /*&& windowWidth<=616*/)
-				{	
-					if(myScrollStarted == true && newsScrollStarted == true){	
-						console.log('Tablet portrait size / scrolls ARE started, we need to destroy');	
+				else if(windowWidth>=500 && windowWidth<=616)
+				{
+					if(myScrollStarted == true && newsScrollStarted == true){
+						console.log('Tablet portrait size / scrolls ARE started, we need to destroy');
 						iScrollPhone(destroy = true);
-						
-						//Reload the page to fix iScroll damage to the layout AGRGHHHH! 
+
+						//Reload the page to fix iScroll damage to the layout AGRGHHHH!
 						document.location.reload(true);
 					}
 					else
 					{
-						console.log('Tablet portrait size / scrolls ARE NOT started');	
+						console.log('Tablet portrait size / scrolls ARE NOT started');
 					}
 				}
-				/*else if(windowWidth>=616)
-				{	
+				else if(windowWidth > 616)
+				{
 					iScrollPhone(destroy = true);
 					document.location.reload(true);
-				}*/
+				}
 			};
-			
-			
+
+
         	$(document).ready(function(){
-				
+
 				//This below will depend on user agent string, just a quick and dirty for now...
 				/*var screenSize = parseInt(window.innerWidth);
-				if(screenSize<600){	
+				if(screenSize<600){
 					loaded();
 				}*/
-				resizeFunctions();
+//				resizeFunctions();
 				$(window).resize(function(){	resizeFunctions();	});
-				
-				
+
+
 				bindSubBucketClick();
-				
-			   $('#stockTableChartBtns>a').bind('click', function(e){	
+
+			   $('#stockTableChartBtns>a').bind('click', function(e){
 			   			e.preventDefault();
 						var id = $(this).attr('id');
-						
+
 						switch(id)
 						{
 							case 'showChart':
@@ -473,39 +473,39 @@
 								$(this).css({'background-image': 'url(img/mockup/chartButton.png)'});
 								$(this).siblings('a').css({'background-image': 'url(img/mockup/tableButtonHidden.png)'});
 								$('img[src="img/mockup/stockChart.png"]').toggleClass('showing');
-							break;	
-							
+							break;
+
 							case 'showTable':
 								$('img[src="img/mockup/stockChart.png"]').toggleClass('showing');
 								$(this).css({'background-image': 'url(img/mockup/tableButton.png)'});
 								$(this).siblings('a').css({'background-image': 'url(img/mockup/chartButtonHidden.png)'});
 								$('#stockTable').toggleClass('notShowing');
-							break;	
+							break;
 						}
 			   });
-			   
+
 			   $('#news>h4.sectionHeader').bind('click', function(){
 				   		var newsBlocks = {};
 						newsBlocks = $('.newsLinkBlock');
-						
+
 						$('#news').toggleClass('expanded');
-						
+
 						if(newsBlocks.length >= 3){return false;}// just a safety net so we would not append a ton of unnecessary divs, this block of code will change depending on how we load data in
-			   			var newsLinkBlock = $('.newsLinkBlock').clone();	
-						var newsLinkBlock2 = $('.newsLinkBlock').clone();	
+			   			var newsLinkBlock = $('.newsLinkBlock').clone();
+						var newsLinkBlock2 = $('.newsLinkBlock').clone();
 						$('#news').append(newsLinkBlock);
 						$('#news').append(newsLinkBlock2);
-						
+
 			   });
-			   
+
 			   /*$('.bucketInside').bind('click', function(){
 				   $('#bucketWrapper').css('left', '-100%');
 			   });
-			   
-			   $('li#back').bind('click', function(){	
+
+			   $('li#back').bind('click', function(){
 			   		$('#bucketWrapper').css('left', '0');
 			   });*/
-			   
+
 			 });
         </script>
     </body>
