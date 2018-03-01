@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="cleartype" content="on">
+
+<!--        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/touch/apple-touch-icon-144x144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch/apple-touch-icon-114x114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/touch/apple-touch-icon-72x72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="img/touch/apple-touch-icon-57x57-precomposed.png">
+        <link rel="shortcut icon" href="img/touch/apple-touch-icon.png">-->
+        
+        <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
+        <!--
+        <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+        -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <!--<link rel="stylesheet" href="css/iPhone.css">-->
+        <script src="js/vendor/modernizr-2.6.1.min.js"></script>
+    </head>
+    <body>
+
+        <div role="main" class="clearfix">
+        	<div id="header"><img src="img/mockup/logo.png"/></div>
+            <div id="quotesAndNews" class="clearfix">
+            	
+                <div id="stocks">
+                <h4 id="quoteName" class="sectionHeader">NYSE: LBC</h4>
+                <div id="wrapper">
+                    <h2 id="currentPrice">$59.49</h2>
+                    <h4 id="trend">+1.00</h4>
+                    <img src="img/mockup/refresh.png"/>
+                    <p class="lastUpdate"><em>Last Update:</em></p>
+                    <p class="lastUpdate"><em>3/39/2012 - 12:16pm ET</em></p>
+                </div>
+                <div id="stockTableChart" class="clearfix">
+                	<div id="stockTableChartBtns">
+                		<a id="showChart" href="#"></a>
+                		<a id="showTable" href="#"></a>
+                    </div>
+                    <table id="stockTable">
+                    	<tr>
+                        	<td>Day's High:</td>
+                            <td>$60.95</td>
+                        </tr>
+                        <tr style="border-bottom:0.125em solid #FFF;">
+                        	<td>Day's Low:</td>
+                            <td>$60.62</td>
+                        </tr>
+                        <tr>
+                        	<td>Year's High:</td>
+                            <td>$62.63</td>
+                        </tr>
+                        <tr style="border-bottom:0.125em solid #FFF;">
+                        	<td>Year's Low:</td>
+                            <td>$48.31</td>
+                        </tr>
+                        <tr>
+                        	<td>Change:</td>
+                            <td>-0.80%</td>
+                        </tr>
+                        <tr style="border-bottom:0.125em solid #FFF;">
+                        	<td>Volume:</td>
+                            <td>2,764,771</td>
+                        </tr>
+                        <tr>
+                        	<td>Last:</td>
+                            <td>$60.70</td>
+                        </tr>
+                    </table>
+                    <img src="img/mockup/stockChart.png" />
+                </div>
+                </div>
+                
+                <div id="news">
+                <h4 class="sectionHeader">Latest News</h4>
+                	<div id="arrowShadowOne"></div><!-----------------------------------	This is the shadow and the arrow of the latest news, not sure if it's the best solution but it works for now	-->
+                    <div class="newsLinkBlock">
+                        <div class="newsLink">
+                            <h5>Lorem ipsum dolor sit</h5>
+                            <p>Morbi arcu ligula, laoreet a posuere non, lobortis a turpis. Proin sem just.</p>
+                        </div>
+                        <div class="newsLink">
+                            <h5>Lorem ipsum dolor sit</h5>
+                            <p>Morbi arcu ligula, laoreet a posuere non, lobortis a turpis. Proin sem just.</p>
+                        </div>
+                        <div class="newsLink">
+                            <h5>Lorem ipsum dolor sit</h5>
+                            <p>Morbi arcu ligula, laoreet a posuere non, lobortis a turpis. Proin sem just.</p>
+                        </div>
+                    </div>
+					<div id="arrowShadowTwo"></div><!-----------------------------------	This is the shadow and the arrow of the latest news, not sure if it's the best solution but it works for now	-->
+                </div>
+                
+                <div class="clearfix"></div>
+            </div>
+            <div id="bucketWrapper" class="clearfix">
+            	<div id="mainBuckets" class="clearfix">
+                <div class="bucket"><div class="bucketInside"><h5>Event Calendar</h5><img src="img/mockup/icon.png"></div></div>
+                <div class="bucket"><div class="bucketInside"><h5>Event Calendar</h5><img src="img/mockup/icon.png"></div></div>
+                <div class="bucket"><div class="bucketInside"><h5>Event Calendar</h5><img src="img/mockup/icon.png"></div></div>
+                <div class="bucket"><div class="bucketInside"><h5>Event Calendar</h5><img src="img/mockup/icon.png"></div></div>
+                <div class="bucket"><div class="bucketInside"><h5>Event Calendar</h5><img src="img/mockup/icon.png"></div></div>
+                <div class="bucket"><div class="bucketInside"><h5>Event Calendar</h5><img src="img/mockup/icon.png"></div></div>
+                <div class="bucket"><div class="bucketInside"><h5>Event Calendar</h5><img src="img/mockup/icon.png"></div></div>
+                <div class="bucket"><div class="bucketInside"><h5>Event Calendar</h5><img src="img/mockup/icon.png"></div></div>
+                </div>
+                
+                
+                <div id="subSectionBuckets" class="clearfix">
+                <div class="feedLinks clearfix">
+                	<ul class="clearfix">
+                    <li id="back">
+                    	<h4 class="subSectionTitle">Title of the section</h4>
+                    </li>
+                </ul>
+                </div>
+                <div class="feedLinks clearfix">
+            	<ul class="clearfix">
+                	<li class="date">
+                    	<time>10/29/12</time>
+                    </li>
+                    <li class="excerpt">
+                    	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                    </li>
+                    <li class="readMore">
+                    	<p>Read More</p>
+                    </li>
+                </ul>
+           		</div>
+                <div class="feedLinks clearfix">
+            	<ul class="clearfix">
+                	<li class="date">
+                    	<time>10/29/12</time>
+                    </li>
+                    <li class="excerpt">
+                    	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                    </li>
+                    <li class="readMore">
+                    	<p>Read More</p>
+                    </li>
+                </ul>
+           		</div>
+                <div class="feedLinks clearfix">
+            	<ul class="clearfix">
+                	<li class="date">
+                    	<time>10/29/12</time>
+                    </li>
+                    <li class="excerpt">
+                    	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                    </li>
+                    <li class="readMore">
+                    	<p>Read More</p>
+                    </li>
+                </ul>
+           		</div>
+                <div class="feedLinks clearfix">
+            	<ul class="clearfix">
+                	<li class="date">
+                    	<time>10/29/12</time>
+                    </li>
+                    <li class="excerpt">
+                    	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                    </li>
+                    <li class="readMore">
+                    	<p>Read More</p>
+                    </li>
+                </ul>
+           		</div>
+                <div class="feedLinks clearfix">
+            	<ul class="clearfix">
+                	<li class="date">
+                    	<time>10/29/12</time>
+                    </li>
+                    <li class="excerpt">
+                    	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                    </li>
+                    <li class="readMore">
+                    	<p>Read More</p>
+                    </li>
+                </ul>
+           		</div>
+                <div class="feedLinks clearfix">
+            	<ul class="clearfix">
+                	<li class="date">
+                    	<time>10/29/12</time>
+                    </li>
+                    <li class="excerpt">
+                    	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                    </li>
+                    <li class="readMore">
+                    	<p>Read More</p>
+                    </li>
+                </ul>
+           		</div>
+                <div class="feedLinks clearfix">
+            	<ul class="clearfix">
+                	<li class="date">
+                    	<time>10/29/12</time>
+                    </li>
+                    <li class="excerpt">
+                    	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                    </li>
+                    <li class="readMore">
+                    	<p>Read More</p>
+                    </li>
+                </ul>
+           		</div>
+                 <div class="feedLinks clearfix">
+            	<ul class="clearfix">
+                	<li class="date">
+                    	<time>10/29/12</time>
+                    </li>
+                    <li class="excerpt">
+                    	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                    </li>
+                    <li class="readMore">
+                    	<p>Read More</p>
+                    </li>
+                </ul>
+           		</div>
+                <div class="feedLinks clearfix">
+            	<ul class="clearfix">
+                	<li class="date">
+                    	<time>10/29/12</time>
+                    </li>
+                    <li class="excerpt">
+                    	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                    </li>
+                    <li class="readMore">
+                    	<p>Read More</p>
+                    </li>
+                </ul>
+           		</div>
+                 <div class="feedLinks clearfix">
+            	<ul class="clearfix">
+                	<li class="date">
+                    	<time>10/29/12</time>
+                    </li>
+                    <li class="excerpt">
+                    	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                    </li>
+                    <li class="readMore">
+                    	<p>Read More</p>
+                    </li>
+                </ul>
+           		</div>
+                <div class="feedLinks clearfix">
+            	<ul class="clearfix">
+                	<li class="date">
+                    	<time>10/29/12</time>
+                    </li>
+                    <li class="excerpt">
+                    	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                    </li>
+                    <li class="readMore">
+                    	<p>Read More</p>
+                    </li>
+                </ul>
+           		</div>
+                 <div class="feedLinks clearfix">
+            	<ul class="clearfix">
+                	<li class="date">
+                    	<time>10/29/12</time>
+                    </li>
+                    <li class="excerpt">
+                    	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                    </li>
+                    <li class="readMore">
+                    	<p>Read More</p>
+                    </li>
+                </ul>
+           		</div>
+                <div class="feedLinks clearfix">
+            	<ul class="clearfix">
+                	<li class="date">
+                    	<time>10/29/12</time>
+                    </li>
+                    <li class="excerpt">
+                    	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                    </li>
+                    <li class="readMore">
+                    	<p>Read More</p>
+                    </li>
+                </ul>
+           		</div>
+                 <div class="feedLinks clearfix">
+            	<ul class="clearfix">
+                	<li class="date">
+                    	<time>10/29/12</time>
+                    </li>
+                    <li class="excerpt">
+                    	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                    </li>
+                    <li class="readMore">
+                    	<p>Read More</p>
+                    </li>
+                </ul>
+           		</div>
+                <div class="feedLinks clearfix">
+            	<ul class="clearfix">
+                	<li class="date">
+                    	<time>10/29/12</time>
+                    </li>
+                    <li class="excerpt">
+                    	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                    </li>
+                    <li class="readMore">
+                    	<p>Read More</p>
+                    </li>
+                </ul>
+           		</div>
+        	</div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script src="js/helper.js"></script>
+        <script src="js/vendor/iscroll.js"></script>
+        <script>
+			var myScroll;
+			var newsScroll;
+			var myScrollStarted = false;
+			var newsScrollStarted = false;
+			var windowWidth;
+			var windowHeight;
+			
+			function iScrollPhone(destroy) {
+			
+				if(destroy == true)
+				{	
+					console.log('Destroy: ' + destroy);
+					console.log('myScroll is of value: ' + myScroll);
+					if(!myScroll)
+					{
+						//console.log('myScroll is null or undefined, exit!');
+						return false;
+					}
+					else if(myScroll != 'undefined')
+					{	
+						myScroll.destroy();
+						myScroll = null;
+						
+						$('.scrollable').unwrap().unwrap().removeClass('scrollable');
+						myScrollStarted = false;
+						
+						//console.log('myScroll destroyed!');
+						
+						newsScroll.destroy();
+						newsScroll = null;
+						
+						$('.newsLinkBlock').attr('id', '').unwrap();
+						newsScrollStarted = false;
+						
+						//console.log('newsScroll destroyed!');
+						
+						return false;
+					}
+				}
+				else
+				{	
+					$('#quotesAndNews, #bucketWrapper').addClass('scrollable');
+					
+					$('.scrollable').wrapAll('<div id="wrapper"><div id="scroller"></div></div>');
+					
+					$('#wrapper').css({
+						'width': '100%',
+						'height': '440px',
+						'position': 'absolute', 
+						'z-index': 1,
+						'overflow': 'auto'
+					});
+					
+					$('#scroller').css({	
+						'width': '100%',
+						'position': 'absolute',
+						'z-index':1
+					});
+					
+					myScroll = new iScroll('wrapper', {  });
+					myScrollStarted = true;
+					
+					$('.newsLinkBlock').attr('id', 'scroller2').wrap('<div id="newsWrapper"></div>');
+					
+					$('#newsWrapper').css({
+						//'width': '320px',
+						'width': '98%',
+						'height': '5.625em',
+						'position': 'absolute', 
+						'z-index': 1,
+						'overflow': 'auto'
+					});
+					
+					newsScroll = new iScroll('newsWrapper', {  });
+					newsScrollStarted = true;
+				}	
+			};
+					
+			function bindSubBucketClick(){	
+				$('.bucketInside').bind('click', function(){
+					 $('#bucketWrapper').toggleClass('slide');
+				 });
+		 
+				 $('li#back').bind('click', function(){	
+					  $('#bucketWrapper').toggleClass('slide');
+				 });		
+			};
+			
+			function resizeFunctions(){
+				windowWidth = parseInt(window.innerWidth);	
+				windowHeight = parseInt(window.innerHeight);	
+				if(windowWidth<=499)
+				{	
+					if(myScrollStarted == true && newsScrollStarted == true)
+					{
+						//console.log('Phone screen size / Scrolls ARE started, return false.')
+						return false; 
+					}
+					else
+					{	
+						//console.log('Phone screen Size / Scrolls are not started and we are starting them.')
+						iScrollPhone();
+					}
+				}
+				else if(windowWidth>=500 /*&& windowWidth<=616*/)
+				{	
+					if(myScrollStarted == true && newsScrollStarted == true){	
+						console.log('Tablet portrait size / scrolls ARE started, we need to destroy');	
+						iScrollPhone(destroy = true);
+						
+						//Reload the page to fix iScroll damage to the layout AGRGHHHH! 
+						document.location.reload(true);
+					}
+					else
+					{
+						console.log('Tablet portrait size / scrolls ARE NOT started');	
+					}
+				}
+				/*else if(windowWidth>=616)
+				{	
+					iScrollPhone(destroy = true);
+					document.location.reload(true);
+				}*/
+			};
+			
+			
+        	$(document).ready(function(){
+				
+				//This below will depend on user agent string, just a quick and dirty for now...
+				/*var screenSize = parseInt(window.innerWidth);
+				if(screenSize<600){	
+					loaded();
+				}*/
+				resizeFunctions();
+				$(window).resize(function(){	resizeFunctions();	});
+				
+				
+				bindSubBucketClick();
+				
+			   $('#stockTableChartBtns>a').bind('click', function(e){	
+			   			e.preventDefault();
+						var id = $(this).attr('id');
+						
+						switch(id)
+						{
+							case 'showChart':
+								$('#stockTable').toggleClass('notShowing');
+								$(this).css({'background-image': 'url(img/mockup/chartButton.png)'});
+								$(this).siblings('a').css({'background-image': 'url(img/mockup/tableButtonHidden.png)'});
+								$('img[src="img/mockup/stockChart.png"]').toggleClass('showing');
+							break;	
+							
+							case 'showTable':
+								$('img[src="img/mockup/stockChart.png"]').toggleClass('showing');
+								$(this).css({'background-image': 'url(img/mockup/tableButton.png)'});
+								$(this).siblings('a').css({'background-image': 'url(img/mockup/chartButtonHidden.png)'});
+								$('#stockTable').toggleClass('notShowing');
+							break;	
+						}
+			   });
+			   
+			   $('#news>h4.sectionHeader').bind('click', function(){
+				   		var newsBlocks = {};
+						newsBlocks = $('.newsLinkBlock');
+						
+						$('#news').toggleClass('expanded');
+						
+						if(newsBlocks.length >= 3){return false;}// just a safety net so we would not append a ton of unnecessary divs, this block of code will change depending on how we load data in
+			   			var newsLinkBlock = $('.newsLinkBlock').clone();	
+						var newsLinkBlock2 = $('.newsLinkBlock').clone();	
+						$('#news').append(newsLinkBlock);
+						$('#news').append(newsLinkBlock2);
+						
+			   });
+			   
+			   /*$('.bucketInside').bind('click', function(){
+				   $('#bucketWrapper').css('left', '-100%');
+			   });
+			   
+			   $('li#back').bind('click', function(){	
+			   		$('#bucketWrapper').css('left', '0');
+			   });*/
+			   
+			 });
+        </script>
+    </body>
+</html>

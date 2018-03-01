@@ -1,0 +1,1081 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+	font-family:Helvetica, Arial, sans-serif
+}
+
+a {
+    color: #00e;
+}
+
+a:visited {
+    color: #551a8b;
+}
+
+a:hover {
+    color: #06e;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles _ iPhone FIRST	!!!!!!
+   ========================================================================== */
+body, html{	
+	overflow:hidden !important; 
+	color:#444;
+	min-height:100%;
+	height:auto;
+}
+div[role="main"]{
+	width:100%;
+	min-height:100%;	
+	height:auto;
+	margin:0;
+	padding:0;
+}
+#header{
+	width:100%;
+	height:2.500em;	
+	text-align:center;
+}
+#quotesAndNews{
+	width:100%;
+	position:relative;
+	margin:0;
+	padding:0;
+	background-color:#f2f2f2;
+	overflow:hidden;
+}
+#quotesAndNews:before{
+	content:"";
+	position:absolute;
+	z-index:1000;
+	height:0.063em;
+	width:100%;
+	top:-0.500em;
+	left:0;
+	background-color:transparent;
+	box-shadow:0px 4px 16px 1px rgba(0, 0, 0, .6); 
+}
+#quotesAndNews:after{
+	content:"";
+	position:absolute;
+	z-index:1000;
+	height:0.063em;
+	width:100%;
+	top:11.438em;
+	left:0;
+	background-color:#d6d6d6;
+	box-shadow:0px 4px 16px 1px rgba(0, 0, 0, .6); 
+}
+
+#stocks{
+	margin:0 0.625em;
+	position:relative;
+}
+
+#quoteName{	
+	position:absolute;
+	top:.550em;
+	left:14.2em;
+	font-size:0.750em;
+	font-weight:300;
+}
+
+/*************	Stock Ticker	*********/
+#stocks>#wrapper{
+	margin:0.500em 0;
+}	
+#currentPrice{	
+	margin:0 0 0 2.5em;
+	padding:0;
+	display:inline-block;
+	width:3em;
+	font-size:1.875em;
+	font-weight:300;
+}
+#trend{
+	margin:0;
+	padding:0;
+	position:relative;
+	top:-1em;
+	left:0;
+	font-size:.750em;
+	color:#9b9d9b;
+	display:inline-block;
+}
+img[src="img/mockup/refresh.png"]{
+	display:inline-block;
+	position:absolute;
+	top:0.625em;
+	left:0;
+}
+.lastUpdate{
+	display:none;
+}
+
+#stockTableChart{display:none;}
+
+#news{
+	height: 5.625em;
+	background-color:#FFF;
+	padding:0.650em 0.650em 1.5em;	
+	position:relative;
+}
+#news:before{
+	content:"";
+	height:1px;
+	width:100%;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:10;
+	background-color:#d6d6d6;
+	box-shadow:0px -5px 16px 1px rgba(0, 0, 0, .4); 
+}
+#news>h4.sectionHeader{
+	margin:0;
+	font-size:0.875em;
+	font-weight:300;
+	text-transform:uppercase;
+}
+.newsLinkBlock{	
+	width:400%;
+	position:relative;
+	overflow:hidden;
+}
+.newsLink{
+	width:16.000em;
+	margin:.7em .7em .7em 0;	
+	position:relative;
+	float:left;
+}
+.newsLink h5{
+	margin:0;
+	padding:0;
+	font-size:0.875em;	
+}
+.newsLink p{
+	margin:0;
+	padding:0;
+	font-size:0.750em;	
+}
+
+#bucketWrapper{
+	width:200%;
+	margin:0;
+	padding:0;
+	position:relative;
+	left:0;
+	
+	transition: left 1600ms;
+	-moz-transition: left 1600ms; /* Firefox 4 */
+	-webkit-transition: left 1600ms; /* Safari and Chrome */
+	-o-transition: left 1600ms; /* Opera */	
+}
+#bucketWrapper.slide{	
+		left:-100%;
+	}
+.bucket, .feedLinks{
+	width:100%;
+	margin:0;	
+	padding:0;
+	border-bottom:0.063em solid #d6d6d6;
+}
+.bucket:before, .feedLinks:before{
+	content:"";
+	position:absolute;
+	z-index:1000;
+	height:0.063em;
+	width:100%;
+	left:0;
+	background-color:transparent;
+	box-shadow:0px 0px 10px 0px rgba(0, 0, 0, .3); 
+}
+.bucketInside{
+	width:100%;
+	height:2.438em;
+	padding:0.500em .7em;
+	background-color:#FFF;
+	background-image:url(../img/mockup/iPhoneBucketArrowLeft.png);
+	/*background-position:17.000em center;*/
+	background-position:90% center;
+	background-repeat:no-repeat;
+	text-align:center;
+}
+.bucketInside>h5{
+	display:block;
+	/*margin:0.500em 11em 0 0;*/
+	margin:1% 46% 0 0;
+	padding:0.313em 0;
+	color:#444444;
+	font-weight:300;
+	text-transform:uppercase;
+	float:right;
+}
+.bucketInside>img{
+	width:2.688em;
+	height:2.438em;
+	margin:0; 
+	padding:0;
+	float:left;
+}
+.subSectionTitle{
+	display:block;
+	background-color:#FFF;	
+	margin:0;
+	padding:.5em 1.5em;
+	font-size:1.4em;
+	background-image:url(../img/mockup/arrow_left.png);
+	background-repeat:no-repeat;
+	background-position:-5px 9px;	
+}
+.feedLinks ul{
+	display:block;
+	height:2.438em;
+	overflow:hidden;
+	margin:0;
+	padding:0.500em .7em;	
+}
+.feedLinks ul li{	
+	display:inline-block;
+	margin:0;
+	padding:0;
+	font-size:0.8em;
+	float:left;
+}
+.date{	
+	width:20%;
+}
+.date time{
+	display:block;
+	margin:1em 0;	
+}
+.excerpt{	
+	width:60%;
+}
+.readMore{	
+	width:20%;
+	height:3em;
+	text-indent:-9999px;
+	background-image:url(../img/mockup/iPhoneBucketArrowLeft.png);
+	background-position:2.000em center;
+	background-repeat:no-repeat;
+}
+.excerpt p, .readMore p{	
+	margin:0;
+	padding:0;
+}
+
+#mainBuckets{	
+	width:50%;
+	position:relative;
+	float:left;
+}
+#subSectionBuckets{	
+	width:50%;
+	position:relative;
+	float:left;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 500px) {	
+	/*div[role="main"]{
+		width:100%;
+		height:100%;
+		overflow:hidden;	
+	}*/
+	
+	#header{
+		width:100%;
+		height:3.500em;	
+		border-bottom:0.063em solid #c6c6c6;
+		text-align:center;
+	}
+	#header img{margin-top:1em;}
+	
+	#quotesAndNews{
+		width:31%;
+		position:relative;
+		z-index:10;
+		float:left;
+		border-right:0.063em solid #c6c6c6;
+	}
+	#quotesAndNews:before{
+		content:"";
+		position:absolute;
+		z-index:1000;
+		height:100%;
+		width:1px;
+		top:-8px;
+		background-color:transparent;
+		box-shadow:0px 4px 16px 1px rgba(0, 0, 0, .6); 
+		right:0;
+	}
+	#quotesAndNews:after{display:none;}
+	
+	
+	#quoteName{	
+		display:block;
+		margin:0;
+		padding:1em 1em .5em 1em;
+		border-bottom:1px solid #F2F2F2;
+		border-bottom:1px solid #FFF;	
+		box-shadow:0px 2px 4px 1px rgba(0, 0, 0, .1);	
+		position:relative;
+		top:0;
+		left:0;
+		font-size:1em;
+		font-weight:500;
+		text-transform:uppercase;
+	}
+	#stocks{
+		margin:0 0 1.5em;
+	}
+	
+	/*************	Stock Ticker	*********/
+	#stocks>#wrapper{
+		margin:1em;
+	}	
+	#currentPrice{
+		display:block;	
+		margin:0;
+		padding:0;
+		font-size:3.000em;
+		font-weight:300;
+	}
+	#trend{
+		margin:0;
+		padding:0;
+		font-size:2.000em;
+		color:#9b9d9b;
+		display:block;
+		float:left;
+		position:relative;
+		top:0;
+		left:0;
+		font-size:1em;	
+	}
+	img[src="img/mockup/refresh.png"]{	
+		margin:0.8em 0 0 2em;
+		display:block;
+		position:relative;
+		top:-0.500em;
+		left:4.375em;
+	}
+	.lastUpdate{
+		display:block;	
+		font-size:0.750em;
+		margin:0;
+	}
+	#showChart, #showTable, img[src="img/mockup/stockChart.png"]{		
+		display:none; /***********************************************************	these buttons and chart image NOT shown in the portrait mode*/
+	}
+	#stockTableChart{
+		display:block;
+		margin:1em 1em 0 1em;	
+	}
+	#stockTable{	
+		width:100%;
+		font-size:.875em;
+		color:#444;
+	}
+	#stockTable tr td{padding:.4em 0;}
+	#stockTable tr td:nth-child(1){
+		text-align:left;
+		font-weight:300;
+		
+	}
+	#stockTable tr td:nth-child(2){
+		text-align:right;
+		font-weight:bold;
+	}
+	/*************	End Stock Ticker	*********/	
+	#news{
+		height:100%;
+		/*height:20em;*/
+		background-color:#FFF;
+		padding:0 0 1.5em 0;	
+		position:relative;
+		z-index:10;
+		top:0;
+		
+		-webkit-transition: top 2.25s, padding 1.35s ease-in-out; /* transitions will change once the actual data is being loaded into this area*/
+	}
+	#news>h4.sectionHeader{
+		margin:0;
+		padding:1em 1em .5em 1em;
+		font-size:1em;
+		font-weight:normal;
+		text-transform:none;
+		background-image:url(../img/mockup/arrow_up.png);
+		background-repeat:no-repeat;
+		background-position:134px 14px;	
+	}
+	#news.expanded>h4.sectionHeader{
+		margin:0;
+		font-size:1em;
+		font-weight:normal;
+		text-transform:none;
+		background-image:url(../img/mockup/arrow_down.png);
+		background-repeat:no-repeat;
+		background-position:134px 14px;	
+	}
+	#news.expanded{
+		top:-220px;
+		padding-bottom:20em;	
+	}
+	
+	#news:before{
+		content:"";
+		height:0px;
+		width:0px;
+		position:absolute;
+		top:-19px;
+		left:-5px;
+		z-index:10;
+		border-left: 100px solid transparent;
+		border-right: 100px solid transparent; 
+		border-bottom:20px solid white;
+		background-color:transparent;
+		box-shadow:none; 
+	}
+	#news.expanded:before{
+		content:"";
+		height:0px;
+		width:0px;
+		position:absolute;
+		top:-19px;
+		left:-5px;
+		z-index:10;
+		border-left: 100px solid white;
+		border-right: 100px solid white; 
+		border-bottom:0px;
+		border-top:20px solid transparent;
+	}
+	
+	#arrowShadowOne {
+		width: 90px;
+		height: 0px;
+		background-color: white;
+		position: absolute;
+		z-index:0;
+		left: 3px;
+		top: -10px;
+		border:1px solid #FFF;
+		-webkit-transform: skew(0deg, -12deg);
+		box-shadow: 0px -4px 3px 1px rgba(0, 0, 0, .15);	
+	}
+	#news.expanded>#arrowShadowOne {
+		-webkit-transform: skew(0deg, 12deg);
+	}
+	#arrowShadowTwo {	
+		width: 90px;
+		height: 0px;
+		background-color: white;
+		position: absolute;
+		z-index:0;
+		left: 97px;
+		top: -10px;
+		border:1px solid #FFF;
+		-webkit-transform: skew(0deg, 12deg);
+		box-shadow: 0px -4px 3px 1px rgba(0, 0, 0, .15);
+	}
+	#news.expanded>#arrowShadowTwo {	
+		-webkit-transform: skew(0deg, -12deg);
+	}
+	.newsLinkBlock{	
+		width:100%;
+		position:relative;
+		overflow:hidden;
+	}
+	.newsLink{
+		width:10.000em;
+		margin:.7em 1em;
+		float:none;	
+	}
+	.newsLink h5{
+		margin:0;
+		padding:0;
+		font-size:0.875em;	
+	}
+	.newsLink p{
+		margin:0;
+		padding:0;
+		font-size:0.750em;	
+	}
+	
+	#bucketWrapper{
+		width:65.5%;
+		margin:0;
+		padding:0 0 1em 1.125em;
+		position:relative;
+		left:31%;
+	
+		transition: left 1600ms;
+		-moz-transition: left 1600ms; /* Firefox 4 */
+		-webkit-transition: left 1600ms; /* Safari and Chrome */
+		-o-transition: left 1600ms; /* Opera */	
+	}
+	#bucketWrapper.slide{	
+		left:-40%;
+	}
+	.bucket{
+		/*width:9.688em;*/
+		width:37%;
+		height:37%;
+		float:left;
+		/*margin:0.875em 0.875em 0 0;	*/
+		margin:4% 4% 0 0;	
+		padding:1em;
+		background-color:#e4e4e4;
+		border-top-right-radius:10px;
+		border-bottom-right-radius:10px;
+		border-bottom-left-radius:0px;
+		border-top-left-radius:10px;
+		border-bottom:none;
+	}
+	.bucket:before{display:none;}
+	.bucketInside{
+		/*width:9.688em;
+		height:8.375em;*/
+		width:99%;
+		height:99%;
+		padding:0;
+		border-radius:5px;
+		background-color:#FFF;
+		text-align:center;
+		box-shadow:0px 2px 8px 0px rgba(0, 0, 0, .55);	
+		background-image:none;
+	}
+	.bucketInside>h5{
+		display:block;
+		margin:0;
+		padding:0.313em 0;
+		border-top-right-radius:5px;
+		border-top-left-radius:5px;
+		background-color:#444444;
+		color:#FFF;
+		font-weight:300;
+		text-transform:uppercase;
+		float:none;
+	}
+	.bucketInside>img{
+		width:5.688em;
+		height:5.188em;
+		margin:0.750em 0; 
+		padding:0;
+		float:none;
+	}
+	#mainBuckets, #subSectionBuckets{	
+		width:100%;
+		position:absolute;
+	}
+	#subSectionBuckets{	
+		left:104%;
+		border-left:1px solid #CCC;
+	}
+
+}
+
+@media only screen and (min-width: 800px) {
+    /* Style adjustments for viewports that meet the condition */
+	
+	#quotesAndNews{
+		width:100%;
+		position:relative;
+		margin:0;
+		padding:0;
+		float:none;
+		border-right:none;
+		border-bottom:0.063em solid #c6c6c6;
+		background-color:#f2f2f2;
+		overflow:hidden;
+	}
+	#quotesAndNews:before, #quotesAndNews:after{
+		content:"";
+		position:absolute;
+		z-index:1000;
+		height:1px;
+		width:100%;
+		background-color:transparent;
+	}
+	#quotesAndNews:before{box-shadow:0px 4px 16px 1px rgba(0, 0, 0, .6);	top:-1px;}
+	#quotesAndNews:after{box-shadow:0px -4px 16px 1px rgba(0, 0, 0, .6);	}
+	.sectionHeader{
+		padding:1em .5em .5em 1.313em;
+	}
+	.sectionHeader#quoteName{	
+		box-shadow: -3px 2px 4px 1px rgba(0, 0, 0, .1);
+	}
+	#stocks, #news{
+		float:left;
+	}
+	
+	#stocks{
+		width:100%;
+		margin:0;
+		padding-bottom:.5em;
+	}
+	#stocks>#wrapper{
+		width:19%;
+		float:left;
+		margin: 1em .5em .5em 1.313em;
+	}
+	#stockTableChart{
+		width:46%;
+		float:left;
+	}
+	#stockTableChartBtns{
+		width:18%;
+		float:left;	
+	}
+	#showChart, #showTable{		
+		display:block; /***********************************************************Here showing buttons only chart shown via JS*/
+		width:81px;
+		height:70px;
+		margin:0 0 1em 0;
+	}
+	#showChart{
+		background-image:url(../img/mockup/chartButtonHidden.png);
+		background-repeat:no-repeat;
+		background-position:center;	
+	}
+	#showTable{
+		background-image:url(../img/mockup/tableButton.png);
+		background-repeat:no-repeat;
+		background-position:center;	
+	}
+	img[src="img/mockup/stockChart.png"].showing{	
+		display: block; 
+		float: left;
+	}
+	#stockTable{	
+		width:82%;
+		float:left;
+		padding-bottom:1em;
+		font-size:.875em;
+		color:#444;
+	}
+	#stockTable.notShowing{display:none;}
+	#stockTable tr td{padding: .2em .4em;}
+	
+	#news>h4.sectionHeader{
+		min-width:17.250em;
+		box-shadow:-3px -3px 4px 1px rgba(0, 0, 0, .2);	
+		background-color:#FFF;
+		border-bottom:1px solid #f2f2f2;
+		background-image:url(../img/mockup/arrow_left.png);
+		background-repeat:no-repeat;
+		background-position:144px 14px;	
+	}
+	#news.expanded>h4.sectionHeader{
+		padding-left:19px;
+		margin-left:-19px;
+		background-image:url(../img/mockup/arrow_right.png);
+		background-repeat:no-repeat;
+		background-position:144px 14px;		
+	}
+	#news{
+		width:27%;
+		padding-bottom:0.125em;/*this to fill in to the bottom odf the container div*/
+		position:absolute;
+		top:0;
+		right:0;
+		z-index:10;
+		
+		-webkit-transition:width 2.25s ease-in-out; /* transitions will change once the actual data is being loaded into this area*/
+	}
+	#news.expanded{
+		top:0;
+		right:0;
+		width:80%;
+		padding-bottom:0.125em;
+	}
+	#news:before{
+		content:"";
+		height:0px;
+		width:0px;
+		position:absolute;
+		top:45px;
+		left:-119px;
+		z-index:10;
+		border-top: 100px solid transparent;
+		border-bottom: 100px solid transparent; 
+		border-right:20px solid white;
+	}
+	#news.expanded:before{
+		content:"";
+		height:0px;
+		width:0px;
+		position:absolute;
+		top:47px;
+		left:-19px;
+		z-index:10;
+		border-top: 100px solid white;
+		border-bottom: 100px solid white; 
+		border-right:0px;
+		border-left:20px solid transparent;
+	}
+	#arrowShadowOne {
+		width: 0px;
+		height: 93px;
+		background-color: white;
+		position: absolute;
+		z-index:0;
+		left: -10px;
+		top: 48px;
+		border:1px solid #FFF;
+		-webkit-transform: skew(-11deg, 0deg);
+		box-shadow: -3px 2px 4px 1px rgba(0, 0, 0, .2);	
+	}
+	#news.expanded>#arrowShadowOne {
+		-webkit-transform: skew(11deg, 0deg);
+	}
+	#arrowShadowTwo {	
+		width: 0px;
+		height: 104px;
+		background-color: white;
+		position: absolute;
+		z-index:0;
+		left: -10px;
+		top: 146px;
+		border-left:1px solid #FFF;
+		-webkit-transform: skew(10deg, 0deg);
+		box-shadow: -3px 0px 4px 1px rgba(0, 0, 0, .2);
+	}
+	#news.expanded>#arrowShadowTwo {	
+		-webkit-transform: skew(-10deg, 0deg);
+	}
+	.newsLinkBlock{
+		width:16em;
+		float:left;	
+	}
+	.newsLink{
+		width:14.000em;
+		margin:.7em 0em .7em 1.313em;
+	}
+	#bucketWrapper{
+		/*width:100%;
+		margin:0;
+		padding:0 0 1em 1.125em;
+		float:none;*/
+		width:200%;
+		margin:0;
+		padding:0 0 1em 1.125em;
+		position:relative;
+		left:0;
+	
+		transition: left 1600ms;
+		-moz-transition: left 1600ms; /* Firefox 4 */
+		-webkit-transition: left 1600ms; /* Safari and Chrome */
+		-o-transition: left 1600ms; /* Opera */
+	}
+	#bucketWrapper.slide{	
+		left:-102%;
+	}
+	.bucket{
+		/*width:11.875em;
+		height:10.188em;
+		margin:1.250em 1.250em 0 0;	
+		padding:1.250em;*/
+		width: 19%;
+		height:10.188em;
+		margin: 2% 2% 0 0;	
+		padding: 2%;
+	}
+
+	.bucketInside{
+		/*width:11.875em;
+		height:10.188em;*/
+	}
+	.bucketInside>h5{
+		display:block;
+		margin:0;
+		padding:0.313em 0;
+		font-size:1.125em;
+	}
+	.bucketInside>img{
+		margin:0.750em 0; 
+		padding:0;
+	}
+	.feedLinks:first-child{	
+		width:100%;
+		margin:0;
+		border-left:none;
+		border-right:none;
+		box-shadow:none;	
+	}
+	.feedLinks:first-child ul{	
+		height:2.438em;
+		padding:0.500em .7em;
+	}
+	.feedLinks:first-child ul li{	
+		height:2.438em;
+	}
+	.feedLinks::before{	
+		visibility:hidden;
+	}
+	/*.feedLinks:first-child:before{	
+		visibility:visible;
+		content:"";
+		position:absolute;
+		z-index:1000;
+		height:0.063em;
+		width:100%;
+		left:0;
+		background-color:transparent;
+		box-shadow:0px 0px 10px 0px rgba(0, 0, 0, .3); 
+	}*/	
+	.feedLinks{
+		width:46.5%;
+		float:left;
+		margin:1.5em 0 0 1.5em;
+		border:1px solid #CCC;
+		box-shadow:0px 0px 6px 0px rgba(0, 0, 0, .2);	
+	}
+	
+	.feedLinks ul{
+		display:block;
+		height:8em;
+		overflow:hidden;
+		margin:0;
+		padding:0;	
+	}
+	.feedLinks ul li{	
+		display:inline-block;
+		margin:0;
+		padding:0;
+		font-size:0.8em;
+		float:none;
+	}
+	.date{	
+		width:100%;
+		background-color:#f2f2f2;
+	}
+	.date time{
+		display:block;
+		margin:1em;	
+		font-weight:bold;
+	}
+	.excerpt{	
+		width:100%;
+	}
+	.readMore{	
+		width:100%;
+		height:3em;
+		text-indent:0px;
+		font-weight:bold;
+		background-image:url(../img/mockup/arrow_right.png);
+		background-position:6.500em 4px;
+		background-repeat:no-repeat;
+	}
+	.excerpt p{	
+		margin:1em;	
+		padding:0;
+	}
+	.readMore p{	
+		margin:.5em 1em;	
+		padding:0;
+	}
+	#mainBuckets, #subSectionBuckets{	
+		width:50%;
+		position:relative;
+		float:left;
+	}
+	#subSectionBuckets{	
+		width:50%;
+		left:0;
+		border-left:none;
+	}
+	#subSectionBuckets:before{	
+		content:"";
+		height:1000px;
+		width:1px;
+		background-color:#CCC;
+		position:absolute;
+		left:1px;
+		z-index:1000;
+	}
+	
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/* Prevent callout */
+
+.nocallout {
+    -webkit-touch-callout: none;
+}
+
+.pressed {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* A hack for HTML5 contenteditable attribute on mobile */
+
+textarea[contenteditable] {
+    -webkit-appearance: none;
+}
+
+/* A workaround for S60 3.x and 5.0 devices which do not animated gif images if
+   they have been set as display: none */
+
+.gifhidden {
+    position: absolute;
+    left: -100%;
+}
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 0;
+    direction: ltr;
+    display: block;
+    overflow: hidden;
+    text-align: left;
+    text-indent: -999em;
+}
+
+.ir br {
+    display: none;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/**
+ * Clearfix helper
+ * Used to contain floats: h5bp.com/q
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+

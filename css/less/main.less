@@ -1,0 +1,443 @@
+/* ==========================================================================
+   Author's custom styles _ PORTRAIT FIRST	!!!!!!
+   ========================================================================== */
+body, html{overflow:hidden !important; color:#444;}
+div[role="main"]{
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+	overflow:hidden;	
+}
+
+#header{
+	width:100%;
+	height:3.500em;	
+	border-bottom:0.063em solid #c6c6c6;
+	text-align:center;
+}
+#header img{margin-top:1em;}
+
+#quotesAndNews{
+	width:31%;
+	position:relative;
+	margin:0;
+	padding:0;
+	float:left;
+	border-right:0.063em solid #c6c6c6;
+	background-color:#f2f2f2;
+	overflow:hidden;
+}
+#quotesAndNews:before{
+	content:"";
+	position:absolute;
+	z-index:1000;
+	height:100%;
+	width:1px;
+	top:-8px;
+	background-color:transparent;
+}
+#quotesAndNews:before{box-shadow:0px 4px 16px 1px rgba(0, 0, 0, .6); right:0;}
+.sectionHeader{
+	display:block;
+	margin:0;
+	padding:1em 1em .5em 1em;
+	font-weight:500;
+	text-transform:uppercase;
+	border-bottom:1px solid #F2F2F2;
+}
+.sectionHeader#quoteName{	
+	border-bottom:1px solid #FFF;	
+	box-shadow:0px 2px 4px 1px rgba(0, 0, 0, .1);	
+}
+#stocks{
+	margin:0 0 1.5em;
+}
+
+/*************	Stock Ticker	*********/
+#stocks>#wrapper{
+	margin:1em;
+}	
+#currentPrice{	
+	margin:0;
+	padding:0;
+	font-size:3.000em;
+	font-weight:300;
+}
+#trend{
+	margin:0;
+	padding:0;
+	font-size:2.000em;
+	color:#9b9d9b;
+	display:block;
+	float:left;	
+}
+img[src="img/mockup/refresh.png"]{	
+	margin:0.8em 0 0 2em;
+}
+#lastUpdate{	
+	font-size:0.750em;
+}
+#showChart, #showTable, img[src="img/mockup/stockChart.png"]{		
+	display:none; /***********************************************************	these buttons and chart image NOT shown in the portrait mode*/
+}
+#stockTableChart{
+	margin:1em 1em 0 1em;	
+}
+#stockTable{	
+	width:100%;
+	font-size:.875em;
+	color:#444;
+}
+#stockTable tr td{padding:.4em 0;}
+#stockTable tr td:nth-child(1){
+	text-align:left;
+	font-weight:300;
+	
+}
+#stockTable tr td:nth-child(2){
+	text-align:right;
+	font-weight:bold;
+}
+/*************	End Stock Ticker	*********/	
+#news{
+	background-color:#FFF;
+	padding-bottom:1.5em;	
+	position:relative;
+	z-index:10;
+	top:0;
+	
+	-webkit-transition: top 2.25s, padding 1.35s ease-in-out; /* transitions will change once the actual data is being loaded into this area*/
+}
+#news.expanded{
+	top:-220px;
+	padding-bottom:20em;	
+}
+
+#news:before{
+	content:"";
+	height:0px;
+	width:0px;
+	position:absolute;
+	top:-19px;
+	left:-5px;
+	z-index:10;
+	border-left: 100px solid transparent;
+	border-right: 100px solid transparent; 
+	border-bottom:20px solid white;
+}
+#news.expanded:before{
+	content:"";
+	height:0px;
+	width:0px;
+	position:absolute;
+	top:-19px;
+	left:-5px;
+	z-index:10;
+	border-left: 100px solid white;
+	border-right: 100px solid white; 
+	border-bottom:0px;
+	border-top:20px solid transparent;
+}
+
+#arrowShadowOne {
+	width: 90px;
+	height: 0px;
+	background-color: white;
+	position: absolute;
+	z-index:0;
+	left: 3px;
+	top: -10px;
+	border:1px solid #FFF;
+	-webkit-transform: skew(0deg, -12deg);
+	box-shadow: 0px -4px 3px 1px rgba(0, 0, 0, .15);	
+}
+#news.expanded>#arrowShadowOne {
+	-webkit-transform: skew(0deg, 12deg);
+}
+#arrowShadowTwo {	
+	width: 90px;
+	height: 0px;
+	background-color: white;
+	position: absolute;
+	z-index:0;
+	left: 97px;
+	top: -10px;
+	border:1px solid #FFF;
+	-webkit-transform: skew(0deg, 12deg);
+	box-shadow: 0px -4px 3px 1px rgba(0, 0, 0, .15);
+}
+#news.expanded>#arrowShadowTwo {	
+	-webkit-transform: skew(0deg, -12deg);
+}
+.newsLink{
+	margin:.7em 1em;	
+}
+.newsLink h5{
+	margin:0;
+	padding:0;
+	font-size:0.875em;	
+}
+.newsLink p{
+	margin:0;
+	padding:0;
+	font-size:0.750em;	
+}
+
+
+#bucketWrapper{
+	width:65.5%;
+	margin:0;
+	padding:0 0 1em 1.125em;
+	float:left;
+}
+.bucket{
+	float:left;
+	margin:0.875em 0.875em 0 0;	
+	padding:1em;
+	background-color:#e4e4e4;
+	border-top-right-radius:10px;
+	border-bottom-right-radius:10px;
+	border-bottom-left-radius:0px;
+	border-top-left-radius:10px;
+}
+.bucketInside{
+	width:9.688em;
+	height:8.375em;
+	border-radius:5px;
+	background-color:#FFF;
+	text-align:center;
+	box-shadow:0px 2px 8px 0px rgba(0, 0, 0, .55);	
+}
+.bucketInside>h5{
+	display:block;
+	margin:0;
+	padding:0.313em 0;
+	border-top-right-radius:5px;
+	border-top-left-radius:5px;
+	background-color:#444444;
+	color:#FFF;
+	font-weight:300;
+	text-transform:uppercase;
+}
+.bucketInside>img{
+	margin:0.750em 0; 
+	padding:0;
+}
+
+
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 800px) {
+    /* Style adjustments for viewports that meet the condition */
+	
+	#quotesAndNews{
+		width:100%;
+		position:relative;
+		margin:0;
+		padding:0;
+		float:none;
+		border-right:none;
+		border-bottom:0.063em solid #c6c6c6;
+		background-color:#f2f2f2;
+		overflow:hidden;
+	}
+	#quotesAndNews:before, #quotesAndNews:after{
+		content:"";
+		position:absolute;
+		z-index:1000;
+		height:1px;
+		width:100%;
+		background-color:transparent;
+	}
+	#quotesAndNews:before{box-shadow:0px 4px 16px 1px rgba(0, 0, 0, .6);	top:-1px;}
+	#quotesAndNews:after{box-shadow:0px -4px 16px 1px rgba(0, 0, 0, .6);	}
+	.sectionHeader{
+		padding:1em .5em .5em 1.313em;
+	}
+	.sectionHeader#quoteName{	
+		box-shadow: -3px 2px 4px 1px rgba(0, 0, 0, .1);
+	}
+	#stocks, #news{
+		float:left;
+	}
+	
+	#stocks{
+		width:100%;
+		margin:0;
+		padding-bottom:.5em;
+	}
+	#stocks>#wrapper{
+		width:19%;
+		float:left;
+		margin: 1em .5em .5em 1.313em;
+	}
+	#stockTableChart{
+		width:46%;
+		float:left;
+	}
+	#stockTableChartBtns{
+		width:18%;
+		float:left;	
+	}
+	#showChart, #showTable{		
+		display:block; /***********************************************************Here showing buttons only chart shown via JS*/
+		width:81px;
+		height:70px;
+		margin:0 0 1em 0;
+	}
+	#showChart{
+		background-image:url(../img/mockup/chartButtonHidden.png);
+		background-repeat:no-repeat;
+		background-position:center;	
+	}
+	#showTable{
+		background-image:url(../img/mockup/tableButton.png);
+		background-repeat:no-repeat;
+		background-position:center;	
+	}
+	img[src="img/mockup/stockChart.png"].showing{	
+		display: block; 
+		float: left;
+	}
+	#stockTable{	
+		width:82%;
+		float:left;
+		padding-bottom:1em;
+		font-size:.875em;
+		color:#444;
+	}
+	#stockTable.notShowing{display:none;}
+	#stockTable tr td{padding: .2em .4em;}
+	
+	#news>.sectionHeader{
+		min-width:17.250em;
+		box-shadow:-3px -3px 4px 1px rgba(0, 0, 0, .2);	
+		background-color:#FFF;
+		border-bottom:1px solid #f2f2f2;
+	}
+	#news.expanded>.sectionHeader{
+		padding-left:19px;
+		margin-left:-19px;	
+	}
+	#news{
+		width:27%;
+		padding-bottom:0.125em;/*this to fill in to the bottom odf the container div*/
+		position:absolute;
+		top:0;
+		right:0;
+		z-index:10;
+		
+		-webkit-transition:width 2.25s ease-in-out; /* transitions will change once the actual data is being loaded into this area*/
+	}
+	#news.expanded{
+		top:0;
+		right:0;
+		width:80%;
+		padding-bottom:0.125em;
+	}
+	#news:before{
+		content:"";
+		height:0px;
+		width:0px;
+		position:absolute;
+		top:45px;
+		left:-119px;
+		z-index:10;
+		border-top: 100px solid transparent;
+		border-bottom: 100px solid transparent; 
+		border-right:20px solid white;
+	}
+	#news.expanded:before{
+		content:"";
+		height:0px;
+		width:0px;
+		position:absolute;
+		top:47px;
+		left:-19px;
+		z-index:10;
+		border-top: 100px solid white;
+		border-bottom: 100px solid white; 
+		border-right:0px;
+		border-left:20px solid transparent;
+	}
+	#arrowShadowOne {
+		width: 0px;
+		height: 93px;
+		background-color: white;
+		position: absolute;
+		z-index:0;
+		left: -10px;
+		top: 48px;
+		border:1px solid #FFF;
+		-webkit-transform: skew(-11deg, 0deg);
+		box-shadow: -3px 2px 4px 1px rgba(0, 0, 0, .2);	
+	}
+	#news.expanded>#arrowShadowOne {
+		-webkit-transform: skew(11deg, 0deg);
+	}
+	#arrowShadowTwo {	
+		width: 0px;
+		height: 104px;
+		background-color: white;
+		position: absolute;
+		z-index:0;
+		left: -10px;
+		top: 146px;
+		border-left:1px solid #FFF;
+		-webkit-transform: skew(10deg, 0deg);
+		box-shadow: -3px 0px 4px 1px rgba(0, 0, 0, .2);
+	}
+	#news.expanded>#arrowShadowTwo {	
+		-webkit-transform: skew(-10deg, 0deg);
+	}
+	.newsLinkBlock{
+		width:16em;
+		float:left;	
+	}
+	.newsLink{
+		margin:.7em 0em .7em 1.313em;
+	}
+	#bucketWrapper{
+		width:100%;
+		margin:0;
+		padding:0 0 1em 1.125em;
+		float:none;
+	}
+	.bucket{
+		margin:1.250em 1.250em 0 0;	
+		padding:1.250em;
+	}
+
+	.bucketInside{
+		width:11.875em;
+		height:10.188em;
+	}
+	.bucketInside>h5{
+		display:block;
+		margin:0;
+		padding:0.313em 0;
+		font-size:1.125em;
+	}
+	.bucketInside>img{
+		margin:0.750em 0; 
+		padding:0;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
